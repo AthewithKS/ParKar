@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.09674967, g: 0.35171837, b: 0.7160277, a: 1}
+  m_IndirectSpecularColor: {r: 0.09750357, g: 0.3513138, b: 0.7192931, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &4
 LightmapSettings:
@@ -63522,7 +63522,7 @@ MonoBehaviour:
   PausePanel: {fileID: 1949612344}
   Levelmanager: {fileID: 1411841905}
   time: {fileID: 2040853356}
-  fuelBar: {fileID: 0}
+  fuelBar: {fileID: 1579616971}
   FuelIndicatortext: {fileID: 1602814191}
   fuelamount: 50
   maxFuel: 100
