@@ -8,6 +8,7 @@ TagManager:
   - Traffic
   - Fuel
   - Light
+  - Coin
   layers:
   - Default
   - TransparentFX

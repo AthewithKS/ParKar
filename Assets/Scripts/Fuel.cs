@@ -14,5 +14,10 @@ public class Fuel : MonoBehaviour
             Manager.FuelUpdate(20);
             Destroy(other.gameObject);
         }
+        if (other.CompareTag("Coin"))
+        {
+            Manager.CoinCount(1);
+            Destroy(other.gameObject);
+        }
     }
 }

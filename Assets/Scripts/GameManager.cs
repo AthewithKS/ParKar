@@ -23,6 +23,10 @@ public class GameManager : MonoBehaviour
     public float fuelamount = 50f;
     public float maxFuel = 100f;
     public float fuelConsumptionRate = 1f;
+    // Coin
+    public Text CoinText;
+    public int AddCoin;
+
 
     // starting camera
     public CinemachineVirtualCamera StartingCamera;
@@ -104,6 +108,11 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Out of fuel!");
         }
+    }
+    public void CoinCount(int add)
+    {
+        AddCoin += add;
+        CoinText.text ="Coin "+ AddCoin.ToString("0");   
     }
     public void SavePlayer()
     {
