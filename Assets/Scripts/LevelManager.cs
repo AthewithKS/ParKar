@@ -126,6 +126,7 @@ public class LevelManager : MonoBehaviour
     }
     public void Restart()
     {
+        Time.timeScale = 1f;
         platforms[currentPlatformIndex].gameObject.SetActive(true); platformActive= true; LevelTimer = MaxLevelTimer;
         currentPlatformIndex = 0;
         LevelFailedPanel.SetActive(false);

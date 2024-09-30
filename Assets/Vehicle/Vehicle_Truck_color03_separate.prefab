@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 400000}
   - component: {fileID: 3300000}
   - component: {fileID: 2300000}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wheel_RR2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 400002}
   - component: {fileID: 3300002}
   - component: {fileID: 2300002}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wheel_RR1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 400004}
   - component: {fileID: 3300004}
   - component: {fileID: 2300004}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wheel_RL2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 400006}
   - component: {fileID: 3300006}
   - component: {fileID: 2300006}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wheel_RL1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 400008}
   - component: {fileID: 3300008}
   - component: {fileID: 2300008}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wheel_FR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,7 +426,7 @@ GameObject:
   - component: {fileID: 400010}
   - component: {fileID: 3300010}
   - component: {fileID: 2300010}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wheel_FL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -509,7 +509,7 @@ GameObject:
   - component: {fileID: 400014}
   - component: {fileID: 3300012}
   - component: {fileID: 2300012}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -594,7 +594,7 @@ GameObject:
   - component: {fileID: -1736105772969675531}
   - component: {fileID: 7135327472948545577}
   - component: {fileID: 3118084787071553070}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Vehicle_Truck_color03_separate
   m_TagString: Traffic
   m_Icon: {fileID: 0}
@@ -782,7 +782,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8044050100958180671}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BreakLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -817,7 +817,7 @@ GameObject:
   - component: {fileID: 4250989581219967431}
   - component: {fileID: 944997318616176745}
   - component: {fileID: 4576871491992539361}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -935,7 +935,7 @@ GameObject:
   - component: {fileID: 5356316866630486684}
   - component: {fileID: 4225485382836406077}
   - component: {fileID: 1011968568503956026}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spot Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1051,7 +1051,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2880381370769404730}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: headLights
   m_TagString: Light
   m_Icon: {fileID: 0}
@@ -1086,7 +1086,7 @@ GameObject:
   - component: {fileID: 1047992180628945729}
   - component: {fileID: 863990175345223962}
   - component: {fileID: 8432871059796914718}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1204,7 +1204,7 @@ GameObject:
   - component: {fileID: 1908532341345190192}
   - component: {fileID: 3772252836434971066}
   - component: {fileID: 1688630448167263150}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1320,7 +1320,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5488393807436140831}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}

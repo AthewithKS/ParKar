@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3300000}
   - component: {fileID: 2300000}
   - component: {fileID: 9024750472198439463}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wheel_RR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 3300002}
   - component: {fileID: 2300002}
   - component: {fileID: 3057741285126229644}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wheel_RL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 3300004}
   - component: {fileID: 2300004}
   - component: {fileID: 6423771739623112789}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wheel_FR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -327,7 +327,7 @@ GameObject:
   - component: {fileID: 3300006}
   - component: {fileID: 2300006}
   - component: {fileID: 5712507717749159315}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wheel_FL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -431,7 +431,7 @@ GameObject:
   - component: {fileID: 400010}
   - component: {fileID: 3300008}
   - component: {fileID: 2300008}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Car Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -516,7 +516,7 @@ GameObject:
   - component: {fileID: 4453236580318077339}
   - component: {fileID: 977621092871239863}
   - component: {fileID: 4060664920600955600}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Vehicle_Pick up Truck_color03_separate
   m_TagString: Traffic
   m_Icon: {fileID: 0}
@@ -706,7 +706,7 @@ GameObject:
   - component: {fileID: 390200309803091435}
   - component: {fileID: 4311646661273615511}
   - component: {fileID: 982796689175114979}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -822,7 +822,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8124231580754248037}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BreakLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -857,7 +857,7 @@ GameObject:
   - component: {fileID: 8955409698083364919}
   - component: {fileID: 8166305952124329575}
   - component: {fileID: 2845845993110400090}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -973,7 +973,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4094423442093265647}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: headLights
   m_TagString: Light
   m_Icon: {fileID: 0}
@@ -1008,7 +1008,7 @@ GameObject:
   - component: {fileID: 2462565203807183368}
   - component: {fileID: 4300376215329609500}
   - component: {fileID: 8068810850365892898}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1124,7 +1124,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7593782915828498339}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1161,7 +1161,7 @@ GameObject:
   - component: {fileID: 3398418313256510291}
   - component: {fileID: 2788546833937737946}
   - component: {fileID: 6338780357563621936}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spot Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

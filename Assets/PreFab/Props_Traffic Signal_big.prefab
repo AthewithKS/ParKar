@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3300000}
   - component: {fileID: 2300000}
   - component: {fileID: 8789388524550946143}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Props_Traffic Signal_big
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,8 +102,8 @@ MonoBehaviour:
   LightGreen: {fileID: 5776642467334435594}
   LightOrange: {fileID: 8423223812661673186}
   LightRed: {fileID: 4407773628706553614}
-  GreenLightTime: 0
-  OrangeLightTime: 0
+  GreenLightTime: 8
+  OrangeLightTime: 11
 --- !u!1 &2939168336969085946
 GameObject:
   m_ObjectHideFlags: 0
@@ -115,7 +115,7 @@ GameObject:
   - component: {fileID: 8294522429320406194}
   - component: {fileID: 9017860324449164690}
   - component: {fileID: 3675504899720190984}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot Light Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 1788692378856213702}
   - component: {fileID: 7592658008417442737}
   - component: {fileID: 3013227307938025925}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot Light Orange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -351,7 +351,7 @@ GameObject:
   - component: {fileID: 55467020596090260}
   - component: {fileID: 1349161580679033617}
   - component: {fileID: 1180075344476897899}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot Light Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -467,7 +467,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 140733656325113025}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RedLighs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -499,7 +499,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4017778891969247460}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GreenLighs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -531,7 +531,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8340714610783943592}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OrangeLighs
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class StreetLight : MonoBehaviour
 {
-    
-    
     public void ActivateStreetlights()
     {
         GameObject[] streetlights = GameObject.FindGameObjectsWithTag("Light");
@@ -29,6 +27,7 @@ public class StreetLight : MonoBehaviour
     // Method to deactivate all street lights
     public void DeactivateStreetlights()
     {
+
         GameObject[] streetlights = GameObject.FindGameObjectsWithTag("Light");
         if (streetlights != null && streetlights.Length > 0)
         {

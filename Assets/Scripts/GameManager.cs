@@ -69,6 +69,7 @@ public class GameManager : MonoBehaviour
     public void PauseGame()
     {
         PausePanel.SetActive(true );
+        Time.timeScale = 0f;
     }
     public void FreeRome()
     {
@@ -76,6 +77,8 @@ public class GameManager : MonoBehaviour
         PausePanel.SetActive(false);
         IsStart = false;
         StartingCamera.Priority = 0;
+        Time.timeScale = 1f;
+
     }
     public void StartLevel()
     {
@@ -84,6 +87,7 @@ public class GameManager : MonoBehaviour
         StartPanel.SetActive(false);
         PausePanel.SetActive(false );
         StartingCamera.Priority= 0;
+        Time.timeScale= 1f;
     }
     public void Quit()
     {
