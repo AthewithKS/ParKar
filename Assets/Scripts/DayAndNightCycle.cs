@@ -22,11 +22,10 @@ public class DayAndNightCycle : MonoBehaviour
     //variable
     [SerializeField, Range(0, 24)] private float TimeofDay;
     [SerializeField] private float dayTransitionSpeed;
-    public UnityEvent lightson;
-    public UnityEvent lightsoff;
-    
 
-    bool streetLightsAreOn = false;
+    [Header("Observer Manager")]
+    [SerializeField] private HourObserverManager observerManager;
+
     private void Start()
     {
         DirectionalLight = GetComponent<Light>();
@@ -50,28 +49,9 @@ public class DayAndNightCycle : MonoBehaviour
             TimeofDay %= 24;
 
             UpdateLighting(TimeofDay / 24f);
+            observerManager.Raise(TimeofDay);
         }
-        StreetLightVehicleLightActivity();
         OnHoureChange(TimeofDay);
-    }
-    void StreetLightVehicleLightActivity()
-    {
-
-        if (TimeofDay >= 18f && !streetLightsAreOn)
-        {
-            lightson.Invoke();
-            streetLightsAreOn = true;
-        }
-        else if (TimeofDay < 6f && !streetLightsAreOn)
-        {
-            lightson.Invoke();
-            streetLightsAreOn = true;
-        }
-        else if (TimeofDay >= 6f && TimeofDay < 18f && streetLightsAreOn)
-        {
-            lightsoff.Invoke();
-            streetLightsAreOn = false;
-        }
     }
     void UpdateLighting(float timePercent)
     {

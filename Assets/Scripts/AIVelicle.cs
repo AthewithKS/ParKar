@@ -25,6 +25,8 @@ public class AIVelicle : MonoBehaviour
 
     public float destinationDirection { get; private set; }
 
+    //when destination reached
+    public event Action DestinationReached;
     private void Update()
     {
         RaycastVehicleHit();
@@ -66,12 +68,13 @@ public class AIVelicle : MonoBehaviour
                 Quaternion targetRotaion = Quaternion.LookRotation(destinationDirection);
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotaion, turingSpeed * Time.deltaTime);
 
-                //move vehicle;
+                //move vehicle
                 transform.Translate(Vector3.forward * movingSpeed * Time.deltaTime);
             }
-            else
+             else if(DestinationDistance <breakSpeed && !destinationReached)
             {
                 destinationReached = true;
+                DestinationReached?.Invoke();
             }
         }
     }

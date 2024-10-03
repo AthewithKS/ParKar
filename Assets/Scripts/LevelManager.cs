@@ -103,6 +103,7 @@ public class LevelManager : MonoBehaviour
         if (frontCount > 0 && backCount > 0)
         {
             levelPassedPanel.SetActive(true);
+            lvlPassCoins();
             lvlpass = true;
         }
         else
@@ -133,5 +134,10 @@ public class LevelManager : MonoBehaviour
         gameManager.PausePanel.SetActive(false);
         LevelTimer = MaxLevelTimer;
 
+    }
+    public void lvlPassCoins()
+    {
+        int coin =(int)LevelTimer * 7;
+        gameManager.CoinCount(coin);
     }
 }

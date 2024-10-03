@@ -47,6 +47,9 @@ public class CarController : MonoBehaviour
     public float brake;
     public float InputX;
 
+    private bool isEngineRunning = false;
+    float minPitch = 1f;
+    float maxPitch = 2f;
     void Start()
     {
         rb.centerOfMass = cm; 
@@ -72,6 +75,7 @@ public class CarController : MonoBehaviour
         else breakLight.SetActive(false);
 
         UpdateSpeedText();
+        HandleEngineSounds();
     }
     // FixedUpdate is called at a fixed amout of times per secod(50)
     private void FixedUpdate()
@@ -150,5 +154,23 @@ public class CarController : MonoBehaviour
         float speed = rb.velocity.magnitude * 3.6f;
         // Update the UI Text component
         speedText.text =speed.ToString("F2") + " km/h";
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Hit");
+        SoundManager.PlaySound(SoundType.VehicleHit);
+    }
+    private void HandleEngineSounds()
+    {
+        float speed = rb.velocity.magnitude * 3.6f; // Speed in km/h
+
+        // Start engine sound if throttle is pressed and engine is not already running
+        if(!isEngineRunning)
+        {
+            isEngineRunning = true;
+            SoundManager.PlayLoopingSound(SoundType.EnginIdel); // Start with engine idle sound
+        }
+        float pitch = Mathf.Lerp(minPitch, maxPitch, speed / 100f);
+        SoundManager.SetPitch(pitch);
     }
 }

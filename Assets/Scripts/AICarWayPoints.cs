@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
 
-public class AICarWayPoints : MonoBehaviour
+public class AICarWayPoints : MonoBehaviour,ICarObserver
 {
     [Header("Opponet car")]
     public AIVelicle aivehicle;
@@ -12,17 +12,23 @@ public class AICarWayPoints : MonoBehaviour
     public void Awake()
     {
         aivehicle = GetComponent<AIVelicle>();
+        aivehicle.DestinationReached += OnDestinationReached;
+    }
+    private void OnDestroy()
+    {
+        aivehicle.DestinationReached -= OnDestinationReached;
     }
     private void Start()
     {
         aivehicle.LocateDestination(currentWaypoint.GetPosition());
     }
-    private void Update()
+    public void OnDestinationReached()
     {
-        if (aivehicle.destinationReached)
-        {
-            currentWaypoint = currentWaypoint.nextWaypoint;
-            aivehicle.LocateDestination(currentWaypoint.GetPosition());
-        }
+        currentWaypoint = currentWaypoint.nextWaypoint;
+        aivehicle.LocateDestination(currentWaypoint.GetPosition());
     }
+}
+public interface ICarObserver
+{
+    void OnDestinationReached();
 }

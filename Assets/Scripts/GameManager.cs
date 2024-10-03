@@ -7,6 +7,10 @@ using UnityEngine.Experimental.GlobalIllumination;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("carCamera")]
+    [SerializeField] private GameObject Car_freelookCamera;
+    [SerializeField] private GameObject Car_virtualCamera;
+    private bool freeloockState = true;
 
     [Header("Canvas")]
     public GameObject StartPanel;
@@ -15,17 +19,17 @@ public class GameManager : MonoBehaviour
     public LevelManager Levelmanager;
     public Text time;
     float newTime;
-    
 
+    public float dayTransitionSpeed;
     //Fuel setup
     public Slider fuelBar;
     public Text FuelIndicatortext;
     public float fuelamount = 50f;
     public float maxFuel = 100f;
-    public float fuelConsumptionRate = 1f;
+    public float fuelConsumptionRate = 5f;
     // Coin
     public Text CoinText;
-    public int AddCoin;
+    private int AddCoin=519;
 
 
     // starting camera
@@ -42,6 +46,7 @@ public class GameManager : MonoBehaviour
         IsStart = true;
 
         InvokeRepeating("ConsumeFuel", 1f, 20f);
+        
     }
 
     // Update is called once per frame
@@ -56,14 +61,26 @@ public class GameManager : MonoBehaviour
         }
         RealTime();
         FuelUpdate(0);
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            freeloockState = !freeloockState;
+            CarCameraSwitch();
+        }
 
+    }
+    void CarCameraSwitch()
+    {
+        Car_freelookCamera.SetActive(!freeloockState);
+        Car_virtualCamera.SetActive(freeloockState);
     }
     public void RealTime()
     {
-        newTime += Time.deltaTime;
-        int minut = Mathf.FloorToInt(newTime / 60);
-        int seconds = Mathf.FloorToInt(newTime % 60);
-        time.text = string.Format("{0:00}:{1:00}", minut, seconds);
+        newTime += Time.deltaTime/ dayTransitionSpeed;
+        newTime %= 24f;
+        int hours = Mathf.FloorToInt(newTime);
+        int minut = Mathf.FloorToInt((newTime -hours)*60);
+        int seconds = Mathf.FloorToInt((((newTime - hours)* 60)- minut )* 60);
+        time.text = string.Format("{0:00}:{1:00}:{2:00}",hours, minut, seconds);
 
     }
     public void PauseGame()
@@ -116,7 +133,7 @@ public class GameManager : MonoBehaviour
     public void CoinCount(int add)
     {
         AddCoin += add;
-        CoinText.text ="Coin "+ AddCoin.ToString("0");   
+        CoinText.text =AddCoin.ToString("0");   
     }
     public void SavePlayer()
     {

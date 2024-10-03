@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3300000}
   - component: {fileID: 2300000}
   - component: {fileID: -5318618181108390644}
-  - component: {fileID: 8099523287751138820}
   - component: {fileID: 1592492666400734486}
   m_Layer: 0
   m_Name: Props_Street Light
@@ -108,18 +107,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8099523287751138820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23fee0414fe546b4ea84da440174bc75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &1592492666400734486
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -169,7 +156,7 @@ Transform:
   m_GameObject: {fileID: 194227365542164241}
   serializedVersion: 2
   m_LocalRotation: {x: 0.43143773, y: 0.5602334, z: -0.43143773, w: 0.5602334}
-  m_LocalPosition: {x: 1.881, y: 6.323, z: 0}
+  m_LocalPosition: {x: 1.881, y: 6.053, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -187,13 +174,13 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 0.93529576, b: 0.5896226, a: 1}
-  m_Intensity: 50
+  m_Intensity: 49.52
   m_Range: 16.08
   m_SpotAngle: 160
   m_InnerSpotAngle: 98.33418
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -224,7 +211,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 247
+    m_Bits: 3319
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0

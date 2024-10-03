@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StreetLight : MonoBehaviour
+public class StreetLight : MonoBehaviour,IHourObserver
 {
+    [SerializeField] private HourObserverManager observerManager;
     public void ActivateStreetlights()
-    {
+    { 
         GameObject[] streetlights = GameObject.FindGameObjectsWithTag("Light");
         if (streetlights != null && streetlights.Length > 0)
         {
@@ -43,6 +44,24 @@ public class StreetLight : MonoBehaviour
         {
             Debug.LogError("No Streetlight GameObjects found!");
         }
-
+    }
+    public void onHourChanged(float currentHour)
+    {
+        if(currentHour>=18f || currentHour < 6f)
+        {
+            ActivateStreetlights();
+        }
+        else
+        {
+            DeactivateStreetlights();
+        }
+    }
+    private void OnEnable()
+    {
+        observerManager?.Register(this);    
+    }
+    private void OnDisable()
+    {
+        observerManager?.UnRegister(this);
     }
 }
