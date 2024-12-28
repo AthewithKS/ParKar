@@ -9,6 +9,7 @@ TagManager:
   - Fuel
   - Light
   - Coin
+  - GasPump
   layers:
   - Default
   - TransparentFX

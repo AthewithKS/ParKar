@@ -1,8 +1,5 @@
 using System;
-using System.Collections.Generic;
-using System.Collections;
 using UnityEngine;
-using Unity.VisualScripting;
 using UnityEngine.UI;
 
 public enum Axel

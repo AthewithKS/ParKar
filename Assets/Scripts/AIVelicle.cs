@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AIVelicle : MonoBehaviour
@@ -39,17 +37,13 @@ public class AIVelicle : MonoBehaviour
         Vector3 raycastOrgin = transform.position + Vector3.up * 1.0f;
         if (Physics.Raycast(raycastOrgin, transform.TransformDirection(Vector3.forward), out hit, detectionDistance))
         {
-            //Debug.DrawRay(raycastOrgin, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
-            //Debug.Log("Did Hit");
             if(hit.distance<safeDistance && hit.collider.CompareTag("Traffic"))
             {
-                //Debug.Log("maintaining  safe distance from" + hit.collider.name);
-                movingSpeed = Mathf.Lerp(movingSpeed, 0, Time.deltaTime * 2);
+               movingSpeed = Mathf.Lerp(movingSpeed, 0, Time.deltaTime * 2);
             }
         }
         else
         {
-            //Debug.DrawRay(raycastOrgin, transform.TransformDirection(Vector3.forward) * detectionDistance, Color.white);
             movingSpeed = Mathf.Lerp(movingSpeed,realvehiclespeed,Time.deltaTime * 2);
         }
     }

@@ -1,10 +1,6 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using UnityEngine.Events;
-//using UnityEngine.Experimental.GlobalIllumination;
 
 [ExecuteAlways]
 public class DayAndNightCycle : MonoBehaviour
@@ -29,9 +25,6 @@ public class DayAndNightCycle : MonoBehaviour
     private void Start()
     {
         DirectionalLight = GetComponent<Light>();
-        //StreetLight = GetComponent<StreetLight>();
-
-        //update skybox material
         RenderSettings.skybox.SetFloat("_Blend", 0);
         RenderSettings.skybox.SetTexture("_Texture1", NightSky);
         RenderSettings.skybox.SetTexture("_Texture2", MorningSky);

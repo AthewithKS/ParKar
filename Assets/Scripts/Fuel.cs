@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Fuel : MonoBehaviour
 {
     public GameManager Manager;
+    public GameObject fuelFill_Text;
+    bool isNearPump = false;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -18,6 +17,25 @@ public class Fuel : MonoBehaviour
         {
             Manager.CoinCount(20);
             Destroy(other.gameObject);
+        }
+        if (other.CompareTag("GasPump"))
+        {
+            isNearPump=true;
+        }
+    }
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("GasPump"))
+        {
+            isNearPump = false;
+        }
+    }
+    private void Update()
+    {
+        fuelFill_Text.SetActive(isNearPump);
+        if (isNearPump && Input.GetKeyUp(KeyCode.F))
+        {
+            Manager.FuelUpdate(100);
         }
     }
 }
